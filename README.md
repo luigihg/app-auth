@@ -2,6 +2,18 @@
 
 This is a full-stack authentication application built with Next.js (frontend) and Express.js (backend). It allows users to register, login, and access a protected dashboard.
 
+1. Descargo el repositorio de https://github.com/luigihg/app-auth.git
+2. Entro a la carpeta app-auth
+3. ejecuto npm install
+4. Entro a la carpeta server
+5. ejecuto npm install
+6. Ejecuto el comando > node index.js
+7. Entro en la carpeta app-auth ejecuto > npm run dev
+8. Necesito tener instalado docker en mi maquina local.
+9. Ejecuto el comando docker-compose up -d
+10. Entro en la carpeta sql y creo la tabla usuarios utilizar un cliente conectando a postgress
+11. Listo realizar pruebas.
+
 ## Features
 
   * User registration with email, password, and name.
