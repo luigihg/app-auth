@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* globals.css */
+
+body {
+    font-family: sans-serif; /* Choose your preferred font */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ensure the body covers the full viewport height */
+    background-color: #f0f0f0; /* Example background color */
+  }
+  
+  /* Optional: Style the form container */.container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  
+
+  }

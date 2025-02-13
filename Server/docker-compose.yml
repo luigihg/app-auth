@@ -1,0 +1,30 @@
+version: "3.9"
+services:
+  postgres:
+    image: postgres:latest  # Use the latest official PostgreSQL image
+    container_name: postgres-db
+    environment:
+      POSTGRES_USER: mytest  # Replace with your desired username
+      POSTGRES_PASSWORD: mytest  # Replace with your desired password
+      POSTGRES_DB: authdb  # Replace with your desired database name
+    ports:
+      - "5432:5432"  # Map PostgreSQL's default port
+    volumes:
+      - postgres_data_container:/var/lib/postgresql/data  # Persist data
+
+  backend:
+    # Choose one of the following options:
+
+    # Option 1: Build from a Dockerfile
+    # build:./server   # Uncomment this if you have a Dockerfile in the 'server' directory
+
+    # Option 2: Use a pre-built image
+    image: node:14   # Use the official Node.js 14 image
+
+    ports:
+      - "3001:3001"
+    depends_on:
+      - postgres  # Update the dependency to 'postgres'
+
+volumes:
+  postgres_data_container:  # Volume for PostgreSQL data persistence
